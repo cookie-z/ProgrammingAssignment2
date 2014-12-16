@@ -24,7 +24,6 @@ makeCacheMatrix <- function(x = matrix()) {
              getsolve = getsolve) 
 }
 
-
 ## Write a short comment describing this function
 ## 此函数用于计算上述makeCacheMatrix返回的特殊“矩阵”的逆矩阵。
 ## 如果已经计算逆矩阵（且尚未更改矩阵），

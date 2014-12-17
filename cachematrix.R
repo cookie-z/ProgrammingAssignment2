@@ -29,8 +29,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## 如果已经计算逆矩阵（且尚未更改矩阵），
 ## 那么cachesolve将检索缓存中的逆矩阵。
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-        ## x输入值，为特殊矩阵对象
+        ## 输入值x为特殊矩阵对象
         ## 首先读取缓存，如果存在逆矩阵，直接返回缓存中的数据
         ## 并显示 "getting cached data" 从缓存中读取
         s <- x$getsolve()
@@ -43,6 +42,7 @@ cacheSolve <- function(x, ...) {
         s <- solve(data, ...)
         ## 并将计算结果存入缓存，返回逆矩阵结果
         x$setsolve(s)
+        ## Return a matrix that is the inverse of 'x'
         s     
 }
 
